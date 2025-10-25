@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Про вчителя — Межвинський Ярослав</title>
+  <style>
+    :root {
+      --main-blue: #0078d7;
+      --accent-green: #2ecc71;
+      --text-dark: #222;
+      --text-light: #555;
+      --bg: #f8fafc;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--main-blue), var(--accent-green));
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .logo:hover {
+      color: #ffecb3;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffecb3;
+    }
+
+    /* --- Основна частина --- */
+    main {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .teacher {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      padding: 40px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .teacher-left {
+      flex: 1 1 320px;
+    }
+
+    .teacher-left .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: scale(1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .teacher-left .photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .teacher-right {
+      flex: 1 1 450px;
+    }
+
+    .teacher-right h1 {
+      margin-top: 0;
+      font-size: 2.3rem;
+      color: var(--main-blue);
+    }
+
+    .teacher-right p {
+      line-height: 1.6;
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    .teacher-right h3 {
+      color: var(--accent-green);
+      margin-top: 30px;
+    }
+
+    ul {
+      list-style: "✅ ";
+      padding-left: 1em;
+      color: var(--text-dark);
+    }
+
+    li {
+      margin: 6px 0;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--main-blue), var(--accent-green));
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      background: linear-gradient(90deg, var(--accent-green), var(--main-blue));
+    }
+
+    /* --- Футер --- */
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #2ecc71;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Анімація появи --- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --- Адаптивність --- */
+    @media (max-width: 768px) {
+      .teacher {
+        padding: 25px;
+      }
+
+      .teacher-left, .teacher-right {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .teacher-left .photo {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .teacher-right h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">Межвинський Ярослав</a>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="about.html" class="active">Про вчителя</a>
+        <a href="classes.html">Класи</a>
+        <a href="students.html">Для учнів</a>
+        <a href="parents.html">Для батьків</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="teacher">
+      <div class="teacher-left">
+        <div class="photo" style="background-image: url('images/image1.jpg');"></div>
+      </div>
+
+      <div class="teacher-right">
+        <h1>Межвинський Ярослав</h1>
+        <p><strong>Вчитель інформатики.</strong> Моя мета — зробити навчання не лише корисним, а й натхненним 💡.  
+        Тут ви знайдете підручники, тести та матеріали для 5–9 класів, а також сучасні інтерактивні ресурси, які допоможуть учням відкрити світ технологій з інтересом.</p>
+
+        <h3>Освіта та досвід</h3>
+        <ul>
+          <li>Вища освіта — спеціальність «Інформатика»</li>
+          <li>Досвід роботи з EdEra, LearningApps, Google Classroom</li>
+          <li>Створення інтерактивних тестів, навчальних сайтів і проєктів</li>
+          <li>Учасник програм цифрової трансформації освіти</li>
+        </ul>
+
+        <a class="btn" href="contact.html">📧 Написати листа</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div><strong>Контактна пошта:</strong> <a href="mailto:mezha2005@gmail.com">mezha2005@gmail.com</a></div>
+    <div>© 2025 Межвинський Ярослав</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Розклад уроків — 7 клас</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f2fd;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .schedule {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .day {
+      background: #fff;
+      border-radius: 10px;
+      width: 150px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .day h3 {
+      margin: 5px 0 10px 0;
+      color: #0077cc;
+    }
+    .lesson {
+      width: 100%;
+      border-bottom: 1px dashed #ccc;
+      padding: 4px 0;
+      text-align: center;
+    }
+    .lessons, .clubs {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .clubs {
+      border-top: 1px solid #ccc;
+      padding-top: 5px;
+    }
+    .clubs h4 {
+      margin: 0 0 5px 0;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
+    .back-button {
+      display: block;
+      margin: 30px auto;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Розклад уроків — 7 клас</h1>
+
+  <div class="schedule">
+    <!-- Понеділок -->
+    <div class="day">
+      <h3>Понеділок</h3>
+      <div class="lessons">
+        <div class="lesson">Алгебра</div>
+        <div class="lesson">Українська мова</div>
+        <div class="lesson">Фізика</div>
+        <div class="lesson">Англійська мова</div>
+        <div class="lesson">Інформатика</div>
+        <div class="lesson">Біологія</div>
+        <div class="lesson">Фізкультура</div>
+      </div>
+      <div class="clubs"><h4>Гуртки</h4></div>
+    </div>
+
+    <!-- Вівторок -->
+    <div class="day">
+      <h3>Вівторок</h3>
+      <div class="lessons">
+        <div class="lesson">Геометрія</div>
+        <div class="lesson">Історія</div>
+        <div class="lesson">Хімія</div>
+        <div class="lesson">Українська література</div>
+        <div class="lesson">Англійська мова</div>
+        <div class="lesson">Трудове навчання</div>
+      </div>
+      <div class="clubs"><h4>Гуртки</h4></div>
+    </div>
+
+    <!-- Середа -->
+    <div class="day">
+      <h3>Середа</h3>
+      <div class="lessons">
+        <div class="lesson">Фізика</div>
+        <div class="lesson">Інформатика</div>
+        <div class="lesson">Географія</div>
+        <div class="lesson">Біологія</div>
+        <div class="lesson">Фізкультура</div>
+        <div class="lesson">Музика</div>
+      </div>
+      <div class="clubs"><h4>Гуртки</h4></div>
+    </div>
+
+    <!-- Четвер -->
+    <div class="day">
+      <h3>Четвер</h3>
+      <div class="lessons">
+        <div class="lesson">Алгебра</div>
+        <div class="lesson">Геометрія</div>
+        <div class="lesson">Українська мова</div>
+        <div class="lesson">Історія</div>
+        <div class="lesson">Англійська мова</div>
+        <div class="lesson">Фізкультура</div>
+      </div>
+      <div class="clubs"><h4>Гуртки</h4></div>
+    </div>
+
+    <!-- П’ятниця -->
+    <div class="day">
+      <h3>П’ятниця</h3>
+      <div class="lessons">
+        <div class="lesson">Хімія</div>
+        <div class="lesson">Біологія</div>
+        <div class="lesson">Географія</div>
+        <div class="lesson">Інформатика</div>
+        <div class="lesson">Українська література</div>
+      </div>
+      <div class="clubs"><h4>Гуртки</h4></div>
+    </div>
+  </div>
+
+  <button class="back-button" onclick="history.back()">← Повернутись назад</button>
+</body>
+</html>

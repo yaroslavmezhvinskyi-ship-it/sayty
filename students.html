@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Для учнів — Межвинський Ярослав</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fff);
+      color: #222;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+    .logo:hover { color: #ffecb3; }
+    .main-nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .main-nav a:hover {
+      color: #ffecb3;
+    }
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #0078d7;
+    }
+    .resources {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .resource-btn {
+      padding: 15px 25px;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: scale(1);
+    }
+    .resource-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .blue { background: #0078d7; }
+    .green { background: #2ecc71; }
+    .yellow { background: #f1c40f; }
+    .orange { background: #e67e22; }
+    .red { background: #e74c3c; }
+    .purple { background: #9b59b6; }
+
+    /* Таблиця дзвінків */
+    .schedule {
+      margin-top: 50px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: none;
+      text-align: left;
+      animation: fadeIn 0.6s ease;
+    }
+    .schedule table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .schedule th, .schedule td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    .schedule th {
+      background-color: #0078d7;
+      color: #fff;
+    }
+    .schedule h3 {
+      color: #0078d7;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Межвинський Ярослав</a>
+    <nav class="main-nav">
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про вчителя</a>
+      <a href="classes.html">Класи</a>
+      <a href="students.html" class="active">Для учнів</a>
+      <a href="parents.html">Для батьків</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contact.html">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2>👨‍💻 Для учнів</h2>
+  <p>Оберіть свій клас, щоб переглянути розклад уроків, правила безпеки та інші матеріали.</p>
+
+  <div class="resources">
+    <a href="https://www.shkola22.com.ua/teachers/informat/tb.html" class="resource-btn blue">🔒 Безпека в Інтернеті</a>
+    <a href="rozklad5.html" class="resource-btn green">📘 5 клас</a>
+    <a href="rozklad6.html" class="resource-btn yellow">📗 6 клас</a>
+    <a href="rozklad7.html" class="resource-btn orange">📙 7 клас</a>
+    <a href="rozklad8.html" class="resource-btn red">📕 8 клас</a>
+    <a href="rozklad9.html" class="resource-btn blue">📓 9 клас</a>
+    <button class="resource-btn purple" id="toggleSchedule">🔔 Розклад дзвінків</button>
+  </div>
+
+  <div class="schedule" id="scheduleBlock">
+    <h3>🔔 Розклад дзвінків</h3>
+    <table>
+      <tr><th>Урок</th><th>Початок</th><th>Кінець</th></tr>
+      <tr><td>1</td><td>08:30</td><td>09:15</td></tr>
+      <tr><td>2</td><td>09:25</td><td>10:10</td></tr>
+      <tr><td>3</td><td>10:20</td><td>11:05</td></tr>
+      <tr><td>4</td><td>11:25</td><td>12:10</td></tr>
+      <tr><td>5</td><td>12:30</td><td>13:15</td></tr>
+      <tr><td>6</td><td>13:25</td><td>14:10</td></tr>
+      <tr><td>7</td><td>14:20</td><td>15:05</td></tr>
+    </table>
+  </div>
+
+  <a href="index.html" style="display:block;margin-top:40px;text-decoration:none;color:#0078d7;">← Повернутись на головну</a>
+</main>
+
+<footer>
+  © 2025 Межвинський Ярослав | Контакт: <a href="mailto:mezha2005@gmail.com">mezha2005@gmail.com</a>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('toggleSchedule');
+  const scheduleBlock = document.getElementById('scheduleBlock');
+  toggleBtn.addEventListener('click', () => {
+    scheduleBlock.style.display = 
+      scheduleBlock.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>

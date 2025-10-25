@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Галерея — Межвинський Ярослав</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Межвинський Ярослав</a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="about.html" class="nav-link">Про вчителя</a>
+      <a href="classes.html" class="nav-link">Класи</a>
+      <a href="students.html" class="nav-link">Для учнів</a>
+      <a href="parents.html" class="nav-link">Для батьків</a>
+      <a href="gallery.html" class="nav-link active">Галерея</a>
+      <a href="contact.html" class="nav-link">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container gallery-page">
+  <h1>Галерея</h1>
+  <p class="gallery-intro">Тут ви можете переглянути найкращі моменти навчання, творчі роботи учнів та яскраві події шкільного життя 📸</p>
+
+  <div class="gallery-grid">
+    <div class="thumb"><img src="images/foto1.jpg" alt="Фото 1"><div class="overlay">Урок інформатики</div></div>
+    <div class="thumb"><img src="images/foto2.jpg" alt="Фото 2"><div class="overlay">Проєкт учнів 8 класу</div></div>
+    <div class="thumb"><img src="images/foto3.jpg" alt="Фото 3"><div class="overlay">Змагання з програмування</div></div>
+    <div class="thumb"><img src="images/foto4.jpg" alt="Фото 4"><div class="overlay">Творча робота 5-Б</div></div>
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Повернутись на головну</a>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>Контактна пошта:</strong> <a href="mailto:mezha2005@gmail.com">mezha2005@gmail.com</a></div>
+    <div>© 2025 Межвинський Ярослав</div>
+  </div>
+</footer>
+
+<!-- Модальне вікно -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Збільшене фото">
+</div>
+</body>
+</html>

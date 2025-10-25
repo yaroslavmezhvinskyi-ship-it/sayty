@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Класи — 5–9</title>
+  <style>
+    :root {
+      --main-blue: #0078d7;
+      --accent-green: #2ecc71;
+      --text-dark: #222;
+      --text-light: #555;
+      --bg-light: #f8fafc;
+      --shadow: rgba(0,0,0,0.15);
+      --radius: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--main-blue), var(--accent-green));
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .logo:hover { color: #ffecb3; }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #ffecb3; }
+
+    main.container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.2rem;
+      color: var(--main-blue);
+      margin-bottom: 10px;
+    }
+
+    main p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .class-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--main-blue), var(--accent-green));
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 40px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 25px var(--shadow);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .class-card:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: linear-gradient(135deg, var(--accent-green), var(--main-blue));
+      box-shadow: 0 12px 35px var(--shadow);
+    }
+
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      margin-top: 50px;
+    }
+
+    footer a { color: var(--accent-green); }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .class-grid { grid-template-columns: 1fr; gap: 20px; }
+      main h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">Межвинський Ярослав</a>
+      <nav>
+        <a href="index.html" class="nav-link">Головна</a>
+        <a href="about.html" class="nav-link">Про вчителя</a>
+        <a href="classes.html" class="nav-link">Класи</a>
+        <a href="students.html" class="nav-link">Для учнів</a>
+        <a href="parents.html" class="nav-link">Для батьків</a>
+        <a href="gallery.html" class="nav-link">Галерея</a>
+        <a href="contact.html" class="nav-link">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Класи</h1>
+    <p>Оберіть клас, щоб перейти до підручників та тестів.</p>
+
+    <div class="class-grid">
+      <a class="class-card" href="class5.html">5 клас</a>
+      <a class="class-card" href="class6.html">6 клас</a>
+      <a class="class-card" href="class7.html">7 клас</a>
+      <a class="class-card" href="class8.html">8 клас</a>
+      <a class="class-card" href="class9.html">9 клас</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Контактна пошта:</strong> <a href="mailto:mezha2005@gmail.com">mezha2005@gmail.com</a>
+    </div>
+    <div>© 2025 Межвинський Ярослав</div>
+  </footer>
+</body>
+</html>
